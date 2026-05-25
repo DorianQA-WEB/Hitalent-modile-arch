@@ -7,6 +7,12 @@ class Department(BaseModel):
     name : str = Field(..., min_length=1, max_length=200, description="название отдела (1-200 символов)")
     parent_id : int | None = Field(None, description="id родительского отдела или None")
 
+    @field_validator('name')
+    @classmethod
+    def strip_whitespace(cls, v):
+        if isinstance(v, str):
+            return v.strip()
+        return v
 
 class DepartmentResponse(Department):
     id : int = Field(..., description="id отдела")

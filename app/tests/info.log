@@ -1,0 +1,2 @@
+Log: [77a38f73-83b1-48df-b995-e09d54cf0e79:2026-05-25T21:44:19.289016+0500 - INFO - Успешный запрос/departments/{1}/employees]
+Log: [fde614c1-1aa5-4fa9-bd29-2cb43b600a7a:2026-05-25T21:44:19.308755+0500 - WARNING - Запрос /departments/{1}/employees ошибку 422]
