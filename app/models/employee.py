@@ -6,6 +6,14 @@ from app.database import Base
 
 
 class Employee(Base):
+    """
+    Модель сотрудника.
+
+    Хранит информацию о сотруднике компании, включая ФИО, должность,
+    дату приёма на работу, отдел и метаданные (время создания записи).
+
+    Используется в связке с моделью Department для отображения иерархии.
+    """
     __tablename__ = "employees"
 
     id : Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
