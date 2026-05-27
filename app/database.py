@@ -1,3 +1,15 @@
+"""
+Модуль настройки асинхронного подключения к базе данных PostgreSQL.
+
+Использует SQLAlchemy 2.0+ с поддержкой async/await.
+Настраивает движок (engine), фабрику сессий и базовый класс для моделей.
+Загружает параметры подключения из переменных окружения (.env).
+
+Пример .env:
+    DATABASE_URL=postgresql+asyncpg://user:password@localhost:5432/dbname
+
+Требует установленного пакета: asyncpg
+"""
 # --------------- Асинхронное подключение к PostgreSQL -------------------------
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
